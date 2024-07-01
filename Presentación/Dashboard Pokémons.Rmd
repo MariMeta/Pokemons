@@ -173,3 +173,48 @@ datatable(Pokemons, options = list(order = list(list(0, 'asc'))),
           )
 ```
 
+# Problema {data-navmenu="Contenido" data-icon="fa-list" data-orientation=rows}
+
+## {data-height="500"}
+
+### Gráfico de barras por los elementos de cada pokemon según su tipo
+
+```{r}
+
+#se seleccionan las variables para trabajar este primer gráfico
+
+x <- c('Acero', 'Agua', 'Bicho', 'Dragón', 'Eléctrico', 'Fantasma', 'Fuego', 'Hada', 'Hielo')
+y1 <- c(35, 140, 83, 65, 58, 35, 66, 29, 36)
+y2 <- c(29, 20, 9, 29, 10, 29, 15, 35, 17)
+data <- data.frame(x, y1, y2)
+
+fig <- plot_ly(data, x = ~x, y = ~y1, type = 'bar', name = 'Tipo 1', marker = list(color = 'rgb(181,131,206)'))
+fig <- fig %>% add_trace(y = ~y2, name = 'Tipo 2', marker = list(color = 'rgb(237,201,255)'))
+fig <- fig %>% layout(xaxis = list(title = "", tickangle = -45),
+         yaxis = list(title = ""),
+         margin = list(b = 100),
+         barmode = 'group')
+
+fig
+```
+
+### Grafico de barras por los elementos de cada pokemon segun su tipo *(continuación)*
+
+```{r}
+
+# se seleccionan las variables restantes para trabajar este segundo gráfico
+
+x <- c('Lucha', 'Normal', 'Hierba', 'Psíquico','Roca', 'Oscuridad', 'Tierra', 'Veneno', 'Volador')
+y1 <- c(40, 117, 102, 60, 65, 45, 40, 46, 9)
+y2 <- c(33, 13, 24, 40, 16, 24, 35, 41, 103)
+data <- data.frame(x, y1, y2)
+
+fig <- plot_ly(data, x = ~x, y = ~y1, type = 'bar', name = 'Tipo 1', marker = list(color = 'rgb(121,216,143)'))
+fig <- fig %>% add_trace(y = ~y2, name = 'Tipo 2', marker = list(color = 'rgb(195,229,203)'))
+fig <- fig %>% layout(xaxis = list(title = "", tickangle = -45),
+         yaxis = list(title = ""),
+         margin = list(b = 100),
+         barmode = 'group')
+
+fig
+```
