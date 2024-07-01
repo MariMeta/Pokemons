@@ -218,3 +218,10 @@ fig <- fig %>% layout(xaxis = list(title = "", tickangle = -45),
 
 fig
 ```
+
+## {.tabset .tabset-fade data-height=500}
+
+### Plantamiento del problema
+
+### Formulación del problema y Objetivos 
+
