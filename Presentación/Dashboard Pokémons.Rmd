@@ -1,0 +1,74 @@
+---
+title: "Pokémons - Equipo Nº 2"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    theme:
+     version: 4
+     bootswatch: pulse
+    source_code: embed
+    logo: logo.png
+    favicon: pikachu.png
+    navbar:
+      - { href: "https://www.pokemon.com/us", align: right, icon: fa-link}
+      - { href: "https://www.instagram.com/pokemon?igsh=MTQwaXVndzM4czN6cQ==", align: right, icon: fa-instagram}
+---
+
+```{r setup, include=FALSE}
+
+#llamado de librerias y base de datos
+
+library(flexdashboard)
+library(plotly)
+library(tidyverse)
+library(DT)
+library(shiny)
+library(readr)
+
+Pokemons_G2 <- read_csv("C:/Trabajo final computación/Pokemons G2.csv")
+```
+
+# Inicio {data-icon="fa-bolt"} 
+
+### Portada
+
+<div align= "center">Univesidad Central de Venezuela
+\
+Facultad de Ciencias Económicas y Sociales
+\
+Escuela de estadística y ciencias actuariales
+\
+Cátedra: Computación</div> 
+
+
+<h1 style="text-align: center;">Pokemons</h1>
+
+<h4 style="text-align: center;">Trabajo Final</h4>
+
+<div style="position: absolute; top: 0; left: 0;">
+![](ucv.png){width=70%}
+</div>
+
+<div style="position: absolute; top: 36%; left: 30%;">
+![](icon.png){width=55%}
+</div> 
+
+
+\
+\
+\
+\
+\
+\
+
+<div align= "right">Grupo Nº2:
+\
+José Mendoza
+\
+Alirio Guerrero
+\
+Mariangel Arguello
+\
+C.I 31.813.137
+</div> 
