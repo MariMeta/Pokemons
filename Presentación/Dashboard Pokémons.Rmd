@@ -156,3 +156,20 @@ fig
 <div style="position: absolute; top: 0%; left: 70%">
   ![](Fennekin.png){width=85%}</div>
 
+# Base de datos {data-navmenu="Contenido" data-icon="fa-pencil"}
+
+```{r}
+
+#se inserta la base de datos, renombrando al español y excluyendo algunos valores
+
+Pokemons <- Pokemons_G2 [,-c(15,16,18)]
+
+datatable(Pokemons, options = list(order = list(list(0, 'asc'))), 
+          rownames = FALSE, filter = "top", class = "compact",
+          colnames = c("ID", "Nombres", "Rango", "Generación", "Evoluciona de", "Tipo 1", " Tipo 2", "Vida", "Ataque", "Defensa", "Ataque especial", "Defensa especial", "Velocidad","Total", "Habilidades"),
+          caption = htmltools::tags$caption(
+    style = 'caption-side: bottom; text-align: left;',
+    "Base de Datos: ", htmltools::em("Esta tabla muestra todas las caracteristicas que se evaluaran en el trabajo."))
+          )
+```
+
