@@ -72,16 +72,27 @@ Mariangel Arguello
 \
 C.I 31.813.137
 </div> 
-
 # Introducción {data-navmenu="Contenido" data-icon="fa-folder-open"}
 
 ## {data-width="500"}
 
 ### Introducción
-
+\
+\
+\
+\
+<div align= "justify">"Pokémon es una de las franquicias más grandes e influyentes de Nintendo. Con una historia que abarca más de veinte años" (Assunção et al., 2017). Su mundo contiene una serie de televisión, varias series de historietas, especiales televisivos, más de cincuenta videojuegos repartidos en varias de las consolas Nintendo y ahora también el mercado de las aplicaciones para celulares. Y su historia se remonta en Japón, país en dónde nace Satoshi Tajiri, que con apenas 25 años tuvo la idea de diseñar un sistema en el que varios jugadores pudieran interactuar en un mundo compartido. 
+</div> 
 
 ### Regiones 
 
+<div style="position: absolute; top: 0%; rigth: 85%">
+![](Map kanto.png){width=68%}</div> 
+
+
+
+<div style="position: absolute; top: 0%; left: 70%">
+![](Map kanto real.png){width=115%}</div> 
   
 ## {data-width="500"}
 
