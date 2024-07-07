@@ -285,4 +285,17 @@ según su elemento principal, y características de ataque</div>
 3) Calcular y comparar las estadísticas descriptivas en cada grupo de pokemon
 4) Determinar el elemento más representativo de cada generación de pokémon</div> 
 
+# Referencias  {data-icon="fa-quote-left"} 
+
+
+<div align= "center">Assunção, C., Brown, M., & Workman, R. (2017). Pokémon is evolving! An investigation into the development of the pokémon community and expectations for the future of the franchise. Press Start, 4(1), 17–35.
+
+La evolución de Pokemón, [more info](https://es.gizmodo.com/la-evolucion-de-pokemon-en-sus-20-anos-de-historia-1761549098)
+
+Generaciones de Pokémon, [more info](https://pokemon.fandom.com/es/wiki/Generaciones_Pok%C3%A9mon)
+
+La historia de Pokemón, [more info](https://lafrikileria.com/blog/historia-pokemon-game-boy/)
+
+Pokémon, [more info](https://issuu.com/espaciodiseno/docs/espacio_dise_o_282-283_dise_o_interactivo_y_videoj/s/12018932).</div> 
+
 
