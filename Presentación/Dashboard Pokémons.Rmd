@@ -230,7 +230,59 @@ fig
 
 ## {.tabset .tabset-fade data-height=500}
 
-### Plantamiento del problema
+### Gráficos de dispersión entre la vida y la defensa y velocidad 
 
-### Formulación del problema y Objetivos 
+```{r}
+fig <- plotly::plot_ly(Pokemons_G2, type = 'scatter')
+fig <- plotly::add_trace(fig, x = ~hp, y = ~def, mode='markers', name=1, marker = list(color = 'pink', size = 5))
+fig <- plotly::add_trace(fig, x = ~hp, y = ~speed, xaxis='x2', yaxis='y2', mode='markers', name=2,  marker = list(color = 'orange', size = 5))
+fig <- plotly::layout(fig, xaxis2 = list(domain = c(0.6, 0.95), anchor='y2'),
+         yaxis2 = list(domain = c(0.6, 0.95), anchor="x2"), xaxis = list(title = "Vida"),
+    yaxis = list(title = "Defensa")) 
+
+fig
+```
+
+### Gráfico de caja y bigotes evaluando el rango y el ataque 
+
+```{r}
+
+box_plot <- plot_ly(Pokemons_G2, x = ~rank, y = ~atk, type = 'box',
+                            marker = list(color = 'rgb()',
+                            outliercolor = 'rgba(56, 5, 241, 0.4)',
+                            line = list(outliercolor = 'rgba(56, 5, 241, 0.6)',
+                                        outlierwidth = 2))) %>% layout(boxmode = "group", xaxis =                                                 list(title = "Rango"),
+                                       yaxis = list(title = "Ataque"))
+box_plot
+```
+
+### Plantamiento y formulación del problema
+
+<h6 style="text-align: center;">Plantamiento</h6>
+
+<div align= "center"> En la franquicia de Pokémon cada generación trae nuevos objetos que se incorporan a los existentes o los reemplazan. Así, aparecen nuevas Poké Balls, nuevos artículos en las tiendas, nuevas máquinas técnicas y máquinas ocultas, etc.
+
+ De la misma manera el objetivo del juego es  llegar a ganar la Liga Pokémon y convertirse en el campeón regional, es decir, convertirse en un maestro Pokémon, capturando, entrenando y evolucionando a estas criaturas para completar el Pokédex, que es un registro electrónico de todos los Pokémon conocidos, clasificando y archivando información tales como su nombres, sus descripciones, estadísticas físicas y especiales de la criatura atrapada o que ven en sus viajes.
+ 
+ Dada la información suministrada anteriormente se propone un analisis detallado teniendo en cuenta los elementos más significativos para determinar las características que describen a todas las generaciones</div> 
+
+<h6 style="text-align: center;">Formulación</h6>
+
+<div align= "center">¿Cuáles son las características que describen a las 9 generaciones de pokemon, tomando en consideración los elementos más significativos de cada grupo?</div> 
+
+### Objetivo general y Objetivos específicos 
+
+<h6 style="text-align: center;">Objetivo general</h6>
+
+<div align= "center">Analizar y comparar las cualidades de cada una de las generaciones de pokémon,
+según su elemento principal, y características de ataque</div> 
+
+<h6 style="text-align: center;">Objetivos específicos</h6>
+
+<div align= "center">
+1) Estudiar las características de cada tipo y generación de los pokemons 
+2) Clasificar a los pokemons,  según su elemento principal, y características de ataque
+3) Calcular y comparar las estadísticas descriptivas en cada grupo de pokemon
+4) Determinar el elemento más representativo de cada generación de pokémon</div> 
+
 
