@@ -42,19 +42,24 @@ Escuela de estadística y ciencias actuariales
 Cátedra: Computación</div> 
 
 
-<h1 style="text-align: center;">Pokemons</h1>
+<h1 style="text-align: center;">Trabajo Final</h1>
 
-<h4 style="text-align: center;">Trabajo Final</h4>
+<h4 style="text-align: center;">Presentación</h4>
 
 <div style="position: absolute; top: 0; left: 0;">
-![](ucv.png){width=70%}
+![](ucv.png){width=90%}
 </div>
 
-<div style="position: absolute; top: 36%; left: 30%;">
+<div style="position: absolute; top: 28%; left: 30%;">
 ![](icon.png){width=55%}
 </div> 
 
-
+\
+\
+\
+\
+\
+\
 \
 \
 \
@@ -66,7 +71,7 @@ Cátedra: Computación</div>
 \
 José Mendoza
 \
-Alirio Guerrero
+C.I 31.099.597
 \
 Mariangel Arguello
 \
@@ -207,7 +212,7 @@ fig <- fig %>% layout(xaxis = list(title = "", tickangle = -45),
 fig
 ```
 
-### Grafico de barras por los elementos de cada pokemon segun su tipo *(continuación)*
+### Gráfico de barras por los elementos de cada pokemon según su tipo *(continuación)*
 
 ```{r}
 
