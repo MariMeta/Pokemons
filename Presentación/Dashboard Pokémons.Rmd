@@ -218,7 +218,7 @@ fig
 
 # se seleccionan las variables restantes para trabajar este segundo gráfico
 
-x <- c('Lucha', 'Normal', 'Hierba', 'Psíquico','Roca', 'Oscuridad', 'Tierra', 'Veneno', 'Volador')
+x <- c('Lucha', 'Normal', 'Planta', 'Psíquico','Roca', 'Oscuridad', 'Tierra', 'Veneno', 'Volador')
 y1 <- c(40, 117, 102, 60, 65, 45, 40, 46, 9)
 y2 <- c(33, 13, 24, 40, 16, 24, 35, 41, 103)
 data <- data.frame(x, y1, y2)
@@ -269,11 +269,11 @@ box_plot
 
  De la misma manera el objetivo del juego es  llegar a ganar la Liga Pokémon y convertirse en el campeón regional, es decir, convertirse en un maestro Pokémon, capturando, entrenando y evolucionando a estas criaturas para completar el Pokédex, que es un registro electrónico de todos los Pokémon conocidos, clasificando y archivando información tales como su nombres, sus descripciones, estadísticas físicas y especiales de la criatura atrapada o que ven en sus viajes.
  
- Dada la información suministrada anteriormente se propone un analisis detallado teniendo en cuenta los elementos más significativos para determinar las características que describen a todas las generaciones</div> 
+ Dada la información suministrada anteriormente se propone un analisis detallado teniendo en cuenta los elementos más significativos para determinar las características de ataque que describen a todas las generaciones</div> 
 
 <h6 style="text-align: center;">Formulación</h6>
 
-<div align= "center">¿Cuáles son las características que describen a las 9 generaciones de pokemon, tomando en consideración los elementos más significativos de cada grupo?</div> 
+<div align= "center">¿Cuáles son las características de ataque que describen a las 9 generaciones de pokemon, tomando en consideración los elementos más significativos de cada grupo?</div> 
 
 ### Objetivo general y Objetivos específicos 
 
