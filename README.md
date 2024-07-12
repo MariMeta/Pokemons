@@ -1,4 +1,4 @@
-<h1 style="text-align: center;">Análisis del ataque de Pokémons dado sus elementos</h1>
+<h1 style="text-align: center;">Análisis de las características de ataque de Pokémons dado sus elementos</h1>
 
  > Proyecto final para la cátedra de computación I (período I-2024) | Universidad Central de Venezuela
 
