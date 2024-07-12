@@ -259,7 +259,7 @@ grafico6
 ```
 
 
-```{r, echo = FALSE, fig.height=3.5, fig.width=4}
+```{r, echo = FALSE}
 grafico8 <-ggplot(data = Pokemon_BD_Nuevo, aes(x=Ataque, y=Generación, color = Tipo_2)) + 
           geom_point(size=1) + 
           labs(title = "Gráfico de dispersión nro. 4.",
@@ -267,3 +267,11 @@ grafico8 <-ggplot(data = Pokemon_BD_Nuevo, aes(x=Ataque, y=Generación, color = 
 
 grafico8
 ```
+
+## Conclusión
+
+Basado en las observaciones realizadas, el estudio ha proporcionado una visión general del comportamiento de los pokemons en referencía a su carasterísticas de Ataque dado sus generaciones y elementos. Revelaron resultados con datos importantes sobre la características de ataque en los pokemons y ayudó a comprender la relación entre los elementos de Pokémon y sus generaciones lo cúal es esencial para apreciar la riqueza y complejidad del universo Pokémon. 
+A través de la recopilación de datos y el uso de técnicas, observación y análisis estadístico, se determinó que gracias a la concentración de sus datos y variables lo cúal genera menos dispersion, las hace más representativas, es asi como puede ayudar a crear una perspectiva más profunda del diseño del juego, las estrategías de combate y la narrativa del mundo Pokémon.
+
+
+## Bibliografía

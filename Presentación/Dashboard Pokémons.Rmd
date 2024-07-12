@@ -66,12 +66,9 @@ Cátedra: Computación</div>
 \
 \
 \
-
-<div align= "right">Grupo Nº2:
 \
-José Mendoza
 \
-C.I 31.099.597
+<div align= "right">
 \
 Mariangel Arguello
 \
