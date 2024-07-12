@@ -190,3 +190,56 @@ Pokemon_BD_Nuevo %>%
   tab_source_note(source_note = md("Tabla nro. 4."))
 ```
 
+### Gráficos 
+
+#### Elementos de tipo 1
+
+Podemos apreciar que los pokemones con mayor concentración de altos  puntos de ataque son los del tipo Dragón, Lucha y tierra. (gráfico de caja y bigotes nro. 1.) Dónde podemos notar que hay una concentración con pokemones con alrededor de 100 puntos de ataque o más. A la vez que podemos notar que los pokemones de tipo Acero, Hielo, Normal, Planta presentan datos atípicos, con pokemones con un alto nivel de puntos de ataque. Mientras que los del tipo Bicho, Normal y Agua empiezan con un nivel de puntos de ataque bastante bajo. Y de igual forma presentan un dispersión (gráfico de disperción nro. 1.) que cuenta con ciertos datos atipicos como el elemeto Planta que tiene más de 125 puntos de ataques.
+
+
+```{r, echo= FALSE}
+
+  grafico1 <- ggplot(data = Pokemon_BD_Nuevo, aes(x=Ataque, y=Tipo_1, color = Tipo_1)) + geom_boxplot() +
+            labs(title = "Gráfico de caja y bigotes nro. 1.",
+                           x = "Ataque", y= "Tipo 1") + scale_colour_viridis_d()
+
+
+grafico1
+  
+```
+
+```{r, echo = FALSE}
+grafico2 <-ggplot(data = Pokemon_BD_Nuevo, aes(x=Ataque, y=Tipo_1, color = Tipo_1)) + 
+          geom_point(size=1) + 
+          labs(title = "Gráfico de dispersión nro. 1.",
+                 x = "Ataque", y= "Tipo 1") + scale_colour_viridis_d(option = "plasma")
+
+grafico2
+```
+
+#### Elementos de tipo 2
+
+ Aquí podemos observar que los pokemons con mayor concentración de altos  puntos de ataque son los del tipo Acero, Lucha otra vez y Electrico. (gráfico de caja y bigotes nro. 2.) Dónde podemos notar que hay una concentración con pokemons con alrededor de 50 puntos de ataque o más. A la vez que podemos notar que los pokemons de tipo Volador presentan datos atípicos, con pokemons con un alto nivel de puntos de ataque. Mientras que los del tipo Dragón empiezan con un nivel de puntos de ataque bastante bajo. Y de igual forma presentan un dispersión (gráfico de disperción nro. 2.) que cuenta con ciertos datos atipicos como el elemento Acero que tiene más de 125 puntos de ataques.
+
+
+```{r, echo= FALSE}
+
+grafico3 <- ggplot(data = Pokemon_BD_Nuevo, aes(x=Ataque, y=Tipo_2, color = Tipo_2)) + geom_boxplot() +
+            labs(title = "Gráfico de caja y bigotes nro. 2.",
+                           x = "Ataque", y= "Tipo 2") + scale_colour_viridis_d()
+
+
+grafico3
+  
+```
+
+
+```{r, echo = FALSE}
+
+grafico4 <- ggplot(data = Pokemon_BD_Nuevo, aes(x=Ataque, y=Tipo_2, color = Tipo_2)) + geom_point(size=1) + 
+          labs(title = "Gráfico de dispersión nro. 2.",
+                 x = "Ataque", y= "Tipo 2") + scale_colour_viridis_d(option = "plasma")
+
+
+grafico4
+```
