@@ -104,3 +104,19 @@ En la franquicia de Pokémon cada generación trae nuevos objetos que se incorpo
 De la misma manera el objetivo del juego es llegar a ganar la Liga Pokémon y convertirse en el campeón regional, es decir, convertirse en un maestro Pokémon, capturando, entrenando y evolucionando a estas criaturas para completar el Pokédex, que es un registro electrónico de todos los Pokémon conocidos, clasificando y archivando información tales como su nombres, sus descripciones, estadísticas físicas y especiales de la criatura atrapada o que ven en sus viaje por lo tanto “La historia de Pokémon no es sólo la historia de sus numerosos proyectos mediáticos y las personas que los crean, sino también la historia de sus fans”[@fedje202225].
 
 Dada la información suministrada anteriormente se propone un analisis detallado teniendo en cuenta los elementos más significativos para determinar las características de ataque que describen a todas las generaciones
+
+
+### Formulación del problema
+
+¿Cuáles son las características de ataque que describen a las 9 generaciones de pokemon, tomando en consideración los elementos más significativos de cada grupo?
+
+### Objetivo general
+
+Analizar y comparar las cualidades de cada una de las generaciones de pokémon, según su elemento principal, y características de ataque
+
+### Objetivos específicos
+
+-   Estudiar las características de cada tipo y generación de los pokemons
+-   Clasificar a los pokemons, según su elemento principal, y características de ataque
+-   Calcular y comparar las estadísticas descriptivas en cada grupo de pokemon
+-   Determinar el elemento más representativo de cada generación de pokémon
