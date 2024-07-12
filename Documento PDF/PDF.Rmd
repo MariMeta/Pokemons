@@ -155,3 +155,38 @@ Pokemon_BD_Nuevo %>%
   fmt_number(columns = everything())%>%
   tab_source_note(source_note = md("Tabla nro. 2."))
 ```
+
+#### Elementos de tipo 2
+
+Consecuentemente en la siguiente tabla (tabla nro. 2.) se presentan todas las estadísticas descriptivas que podemos obtener de las pocas maneras con sus respectivo valor de ataque pero esta vez de los elementos tipo 2 en este caso la muestra consta de 18 pokemones de tipo 2 dentro de los cuáles se observa que se añadió una fila por aquellos valores que no los representan y esta constatado por el valor "Ninguno", de cualquier forma entre nuestras variables tambien podemos obeservar que el valor mínimo en 10 a los puntos por ataques es de 10 puntos por ataque (elemento roca) y su valor máximo es de 181 puntos por ataque (elemento Acero) abarcando un rango un ligeramente menos intercalado a diferencia de los Pokémon elemento tipo 1 con un coeficiente de varianción, promedio y variables contrastadas. No presentan una forma de distribución normal debido a su Kurtosis y al igual que los Pokémons de elementos tipo 1 contienen una asímetria positiva hacia la derecha de la media.
+
+
+```{r, echo=FALSE}
+
+Pokemon_BD_Nuevo %>% 
+  group_by(Tipo_2) %>% 
+  summarise(Promedio = mean(Ataque),
+            D.Estandar = sd(Ataque),
+            Mínimo = min(Ataque),
+            Máximo = max(Ataque),
+            CV = ( sd(Ataque) / mean(Ataque)) * 100,
+            Rango =  max(Ataque) - min(Ataque),
+            NºTotal = n())%>% 
+  gt(rowname_col = "Tipo_2") %>%
+   tab_header(title = "Estadístiscas descriptivas",subtitle = "Los elementos de 2º tipo") %>%
+  fmt_number(columns = everything())%>%
+  tab_source_note(source_note = md("Tabla nro. 3."))
+
+```
+
+```{r, echo = FALSE}
+Pokemon_BD_Nuevo %>% 
+  group_by(Tipo_2) %>% 
+  summarise(Asimetría = quantile(Ataque, 0.75), 
+            Kurtorsis = quantile(Ataque, 1.00))%>% 
+  gt(rowname_col = "Tipo_2") %>%
+  tab_header(title = "Estadístiscas descriptivas",subtitle = "Los elementos de 2º tipo (2)") %>%
+  fmt_number(columns = everything())%>%
+  tab_source_note(source_note = md("Tabla nro. 4."))
+```
+
