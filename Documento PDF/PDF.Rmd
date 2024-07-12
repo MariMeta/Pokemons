@@ -120,3 +120,38 @@ Analizar y comparar las cualidades de cada una de las generaciones de pokémon, 
 -   Clasificar a los pokemons, según su elemento principal, y características de ataque
 -   Calcular y comparar las estadísticas descriptivas en cada grupo de pokemon
 -   Determinar el elemento más representativo de cada generación de pokémon
+
+## Análisis descriptivo
+
+### Estadísticas descriptivas 
+
+#### Elementos de tipo 1
+
+En la siguiente tabla se muestran las estadísticas descriptivas de todos aquellos pokemons con su respectivo valor de ataque y los elementos correspondiente al tipo 1 que consta de 18 elementos diferentes pokemons del tipo 1 los cuales podemos identificar (Tabla nro. 1) para comenzar de manera generalizada como podemos ver el valor mínimo en cuánto a los puntos por ataque de los 18 elementos diferentes de Pokémon, tipo 1, es de 5 puntos por ataque (elemento Normal) mientras que el valor máximo es de 181 puntos por ataque (elemento Planta). Asimismo el rango de puntos por daño resulta ser intercalado entre todos sus valores al igual que el resultado de sus promedios y coeficientes de variación los cuales representan la evaluación de las variables que le da un contraste significante. Por añadidura de igual manera no presenta una forma de distribución normal gracias a los valores de la kurtosis, la cual contiene todos sus valores con una simetría positiva hacia la derecha con respecto la media
+
+```{r, echo=FALSE}
+Pokemon_BD_Nuevo %>% 
+  group_by(Tipo_1) %>% 
+  summarise(Promedio = mean(Ataque),
+            D.Estandar = sd(Ataque),
+            Mínimo = min(Ataque),
+            Máximo = max(Ataque),
+            CV = ( sd(Ataque) / mean(Ataque)) * 100,
+            Rango =  max(Ataque) - min(Ataque),
+            NºTotal = n())%>% 
+  gt(rowname_col = "Tipo_1") %>%
+  tab_header(title = "Estadístiscas descriptivas",subtitle = "Los elementos de 1º tipo") %>%
+  fmt_number(columns = everything())%>%
+  tab_source_note(source_note = md("Tabla nro. 1."))
+```
+
+```{r, echo=FALSE}
+Pokemon_BD_Nuevo %>% 
+  group_by(Tipo_1) %>% 
+  summarise(Asimetría = quantile(Ataque, 0.75), 
+            Kurtorsis = quantile(Ataque, 1.00))%>% 
+  gt(rowname_col = "Tipo_1") %>%
+  tab_header(title = "Estadístiscas descriptivas",subtitle = "Los elementos de 1º tipo (2)") %>%
+  fmt_number(columns = everything())%>%
+  tab_source_note(source_note = md("Tabla nro. 2."))
+```
