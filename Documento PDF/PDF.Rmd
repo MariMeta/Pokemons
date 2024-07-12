@@ -12,7 +12,6 @@ bibliography: biblio.bib
 csl: apa.csl
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
@@ -89,3 +88,19 @@ Pokemon_BD_Nuevo$Generación <- stri_replace_all_regex(Pokemon_BD_Nuevo$Generaci
                                                       vectorize_all = FALSE)
 
 ```
+
+![logo de la Universidad Central de Venezuela (UCV)](ucv.png)
+
+\pagebreak
+
+## Introducción
+
+En este informe se realizará un studio sobre Pokémons la cual “Es una de las franquicias más grandes e influyentes de Nintendo. Con una historia que abarca más de veinte años, abarca videojuegos y juegos de cartas coleccionables, programas de televisión de anime y películas, una enorme base de fans, entre otros medios.” [@assunccao2017pokemon] para analizar y comparar las cualidades de los Pokemons con respecto a las nueve generaciones dado sus elementos y sus características de ataque; todo esto se llevará acabo de estadísticas descriptivas para posteriormente evaluar todos aquellos valores que dieron como resultados y realizar una óptima, comparación y análisis para su comprensión.
+
+## Planteamiento del problema
+
+En la franquicia de Pokémon cada generación trae nuevos objetos que se incorporan a los existentes o los reemplazan. Así, aparecen nuevas Poké Balls, nuevos artículos en las tiendas, nuevas máquinas técnicas y máquinas ocultas, etc.
+
+De la misma manera el objetivo del juego es llegar a ganar la Liga Pokémon y convertirse en el campeón regional, es decir, convertirse en un maestro Pokémon, capturando, entrenando y evolucionando a estas criaturas para completar el Pokédex, que es un registro electrónico de todos los Pokémon conocidos, clasificando y archivando información tales como su nombres, sus descripciones, estadísticas físicas y especiales de la criatura atrapada o que ven en sus viaje por lo tanto “La historia de Pokémon no es sólo la historia de sus numerosos proyectos mediáticos y las personas que los crean, sino también la historia de sus fans”[@fedje202225].
+
+Dada la información suministrada anteriormente se propone un analisis detallado teniendo en cuenta los elementos más significativos para determinar las características de ataque que describen a todas las generaciones
