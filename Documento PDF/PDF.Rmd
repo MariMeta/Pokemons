@@ -243,3 +243,27 @@ grafico4 <- ggplot(data = Pokemon_BD_Nuevo, aes(x=Ataque, y=Tipo_2, color = Tipo
 
 grafico4
 ```
+
+#### Análisis de las varibles 
+
+Aquí podemos lograr destacar que los gráficos de dispersión 3 y 4 no tienen constan de tanta dispersión, entre sus datos se mantienen en un plano ordenado en terminos de los elementos presentando pocos datos atipicos que varian según su número de tipo.
+
+
+```{r, echo = FALSE}
+grafico6 <-ggplot(data = Pokemon_BD_Nuevo, aes(x=Ataque, y=Generación, color = Tipo_1)) + 
+          geom_point(size=1) + 
+          labs(title = "Gráfico de dispersión nro. 3.",
+                 x = "Ataque", y= "Generación") + scale_colour_viridis_d(option = "plasma")
+
+grafico6
+```
+
+
+```{r, echo = FALSE, fig.height=3.5, fig.width=4}
+grafico8 <-ggplot(data = Pokemon_BD_Nuevo, aes(x=Ataque, y=Generación, color = Tipo_2)) + 
+          geom_point(size=1) + 
+          labs(title = "Gráfico de dispersión nro. 4.",
+                 x = "Ataque", y= "Generación") + scale_colour_viridis_d(option = "plasma")
+
+grafico8
+```
