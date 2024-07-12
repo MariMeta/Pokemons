@@ -1,0 +1,91 @@
+---
+title: "Análisis del ataque de Pokémons dado sus elementos"
+subtitle: "Proyecto Final"
+author:
+  - Mariangel Arguello
+output: pdf_document
+date: "Julio de 2024"
+fontsize: 12pt
+lang: es-Mx
+toc: TRUE
+bibliography: biblio.bib
+csl: apa.csl
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+#llamado de librerias 
+
+library(tidyverse)
+library(stringr)
+library(stringi)
+library(readr)
+library(gt) 
+library(dplyr)
+library(knitr)
+library(tinytex)
+
+# Creacion del DataFrame 
+
+# Mariangel
+
+Pokemon_BD <- read_csv("C:/Trabajo final computación/Pokemons G2.csv")
+
+# Limpieza de la base de datos "Pokemon_BD"
+
+# En este punto tomare las columnas que yo necesite para trabajar
+
+Pokemon_BD_Nuevo <- Pokemon_BD %>% select(id, name, rank, generation, type1, 
+                                         type2, hp, atk, def, spatk, spdef, 
+                                         speed, total, height, weight)
+
+Pokemon_BD_Nuevo <- Pokemon_BD_Nuevo %>% rename( ID = id, Nombre = name,
+                                                 Rango = rank, Tipo_1 = type1, 
+                                                 Tipo_2 = type2, P_Vida = hp, 
+                                                 Ataque = atk, Defensa = def, 
+                                                 Ataque_Especial = spatk, 
+                                                 Defensa_Especial = spdef, 
+                                                 Velocidad = speed, 
+                                                 Total = total, Altura = height, 
+                                                 Peso = weight, 
+                                                 Generación = generation)
+
+# Tipo 1
+
+Pokemon_BD_Nuevo$Tipo_1 <- stri_replace_all_regex(Pokemon_BD_Nuevo$Tipo_1,
+                                                  pattern = c("bug","dark","dragon","electric","fairy","fighting","fire","flying","ghost", "grass","ground","normal","poison","psychic","rock","steel","water","ice","None"), 
+                                              replacement = c("Bicho","Siniestro","Dragón","Eléctrico","Hada","Lucha","Fuego","Volador","Fantasma","Planta","Tierra","Normal","Veneno","Psíquico","Roca","Acero","Agua","Hielo","Ninguno"),
+                                            vectorize_all = FALSE)
+
+# Tipo 2
+
+Pokemon_BD_Nuevo$Tipo_2 <- stri_replace_all_regex(Pokemon_BD_Nuevo$Tipo_2,
+                                                   pattern = c("bug","dark","dragon","electric","fairy","fighting","fire","flying","ghost", "grass","ground","normal","poison","psychic","rock","steel","water","ice","None"), 
+                                              replacement = c("Bicho","Siniestro","Dragón","Eléctrico","Hada","Lucha","Fuego","Volador","Fantasma","Planta","Tierra","Normal","Veneno","Psíquico","Roca","Acero","Agua","Hielo","Ninguno"),
+                                            vectorize_all = FALSE)
+
+# Nombres de los Pokemons
+
+Pokemon_BD_Nuevo$Nombre <- gsub(" ", "",(Pokemon_BD_Nuevo$Nombre %>% 
+                                                       toupper() %>% 
+                                                     substr(1,1) %>% 
+                                   paste(Pokemon_BD_Nuevo$Nombre %>%
+                                                       tolower() %>%
+                                                        str_sub(2,20))))
+
+Pokemon_BD_Nuevo$Nombre <- stri_replace_all_regex(Pokemon_BD_Nuevo$Nombre,
+                                                  pattern = "-",
+                                                  replacement = "_",
+                                                  vectorize_all = FALSE)
+# Generaciones
+
+Pokemon_BD_Nuevo$Generación <- gsub("generation", "Generación", Pokemon_BD_Nuevo$Generación)
+
+Pokemon_BD_Nuevo$Generación <- stri_replace_all_regex(Pokemon_BD_Nuevo$Generación,
+                                                      pattern = c("i","v","x","-"),
+                                                      replacement = c("I","V","X","_"),
+                                                      vectorize_all = FALSE)
+
+```
